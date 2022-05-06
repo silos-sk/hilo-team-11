@@ -17,8 +17,4 @@ If a player has more than 0 points they decide if they want to keep playing.
 If a player decides not to play again the game is over.
 
 Team 11 Members:
-Daniel Muzo
-Ricardo Rivas
-Shaira Silos
-Bright Yafesi
-Alina Zalozna
+Daniel Muzo, Ricardo Rivas, Shaira Silos, Bright Yafesi, Alina Zalozna
