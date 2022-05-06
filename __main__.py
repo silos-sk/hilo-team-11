@@ -1,4 +1,4 @@
-from game.director import Director
+from game.dealer import Dealer
 
-director = Director()
+dealer = Dealer()
 director.start_game()
