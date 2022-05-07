@@ -16,21 +16,21 @@ class Dealer:
     """
 
     def __init__(self):
-        """Constructs a new Director.
+        """Constructs a new Dealer.
 
         Args:
-            self (Director): an instance of Director.
+            self (Dealer): an instance of Dealer.
         """
         self.is_playing = True
         self.points = 0
         self.total_score = 300
-        
+        self.card = Card()
 
     def start_game(self):
         """Starts the game by running the main game loop.
 
         Args:
-            self (Director): an instance of Director.
+            self (Dealer): an instance of Dealer.
         """
         while self.is_playing:
             #self.get_inputs()
@@ -50,13 +50,13 @@ class Dealer:
         """Updates the player's score.
 
         Args:
-            self (Director): An instance of Director.
+            self (Dealer): An instance of Dealer.
         """
         if not self.is_playing:
             return
 
-        card.draw()
-        self.points = card.points
+        self.card.draw()
+        self.points = self.card.points
         self.total_score += self.points
      
         
@@ -67,12 +67,12 @@ class Dealer:
         """Displays the dice and the score. Also asks the player if they want to roll again. 
 
         Args:
-            self (Director): An instance of Director.
+            self (Dealer): An instance of Dealer.
         """
         if not self.is_playing:
             return
 
-        next_card = card.value
+        next_card = self.card.value
 
         print(f'Next card was: {next_card}')
         print(f'Your score is: {self.total_score}')
