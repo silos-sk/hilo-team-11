@@ -21,4 +21,3 @@ Daniel Muzo
 Ricardo Rivas
 Shaira Silos
 Bright Yafesi
-Alina Zalozna
