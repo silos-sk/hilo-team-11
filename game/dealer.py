@@ -65,7 +65,6 @@ class Dealer:
 
     def do_outputs(self):
         """Displays the dice and the score. Also asks the player if they want to roll again. 
-
         Args:
             self (Dealer): An instance of Dealer.
         """
@@ -76,5 +75,17 @@ class Dealer:
 
         print(f'Next card was: {next_card}')
         print(f'Your score is: {self.total_score}')
-        draw_card = input('Play again [y/n] ')
-        self.is_playing = (draw_card == 'y')
+        while True:
+                looping = input('Play again? [y/n]: ').lower()
+                if looping == 'y':
+                    self.is_playing = True
+                    print('Next game it is!')
+                    break
+                elif looping == 'n':
+                    self.is_playing = False
+                    print('Thanks for playing Hilo')
+                    break
+                else:
+                    print('Invalid input, try again!')
+        print('')  
+        pass
