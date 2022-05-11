@@ -28,7 +28,7 @@ class Dealer:
         Args:
             self (Dealer): an instance of Dealer.
         """
-        while self.is_playing:
+        while self.is_playing and self.total_score > 0:
             print('Welcome to Hilo game!')
             self.do_updates()
             self.do_outputs()
@@ -61,7 +61,7 @@ class Dealer:
         Args:
             self (Dealer): An instance of Dealer.
         """
-        if not self.is_playing:
+        if not self.is_playing and self.total_score < 0:
             return
 
         self.card.draw()
@@ -78,7 +78,7 @@ class Dealer:
         Args:
             self (Dealer): An instance of Dealer.
         """
-        if not self.is_playing:
+        if not self.is_playing and self.total_score < 0:
             return
 
         next_card = self.card.value
