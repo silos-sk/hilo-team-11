@@ -35,6 +35,11 @@ class Dealer:
             self.get_inputs()
 
     def get_inputs(self):
+        """Asks the player if he wants to continue playing.
+
+
+        """
+
         while True:
                 looping = input('Play again? [y/n]: ').lower()
                 if looping == 'y':
@@ -68,7 +73,8 @@ class Dealer:
 
 
     def do_outputs(self):
-        """Displays the dice and the score. Also asks the player if they want to roll again. 
+        """Displays the dice and the score. 
+
         Args:
             self (Dealer): An instance of Dealer.
         """
