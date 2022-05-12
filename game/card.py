@@ -6,7 +6,7 @@ class Card:
     He keeps track of the player points, assigns 100 points if the player guessed right, or substracts 75 points if the player guessed wrong.
     
     Attributes:
-        value (int): card drawned random number
+        .    
     """
 
     def __init__(self):
@@ -20,13 +20,13 @@ class Card:
         self.points = 0
         self.previous_value = 0
         self.guess = ''
+        self.is_playing = True
         
 
 
         
     def draw(self):
-        """Generates a random value between 1 and 13 and calculates points based on player's guess. Asks the player for a guess and calculates points based on the result.
-
+        """Generates a random value between 1 and 13 and calculates points based on player's guess.txt
         Args:
             self (Card): An instance of Card
         
