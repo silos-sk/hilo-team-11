@@ -18,7 +18,6 @@ class Dealer:
         Args:
             self (Dealer): an instance of Dealer.
         """
-        self.is_playing = True
         self.points = 0
         self.total_score = 300
         self.card = Card()
@@ -28,7 +27,7 @@ class Dealer:
         Args:
             self (Dealer): an instance of Dealer.
         """
-        while self.is_playing and self.total_score > 0:
+        while self.card.is_playing and self.total_score > 0:
             print('Welcome to Hilo game!')
             self.do_updates()
             self.do_outputs()
@@ -36,18 +35,16 @@ class Dealer:
 
     def get_inputs(self):
         """Asks the player if he wants to continue playing.
-
-
         """
 
         while True:
                 looping = input('Play again? [y/n]: ').lower()
                 if looping == 'y':
-                    self.is_playing = True
+                    self.card.is_playing = True
                     print('Next game it is!')
                     break
                 elif looping == 'n':
-                    self.is_playing = False
+                    self.card.is_playing = False
                     print('Thanks for playing Hilo')
                     break
                 else:
@@ -61,24 +58,22 @@ class Dealer:
         Args:
             self (Dealer): An instance of Dealer.
         """
-        if not self.is_playing and self.total_score < 0:
+        if not self.card.is_playing and self.total_score < 0:
             return
 
         self.card.draw()
         self.points = self.card.points
         self.total_score += self.points
-     
         
 
 
 
     def do_outputs(self):
         """Displays the dice and the score. 
-
         Args:
             self (Dealer): An instance of Dealer.
         """
-        if not self.is_playing and self.total_score < 0:
+        if not self.card.is_playing and self.total_score < 0:
             return
 
         next_card = self.card.value
@@ -86,4 +81,3 @@ class Dealer:
         print(f'Next card was: {next_card}')
         print(f'Your score is: {self.total_score}')
         pass
-      
