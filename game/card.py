@@ -6,7 +6,10 @@ class Card:
     He keeps track of the player points, assigns 100 points if the player guessed right, or substracts 75 points if the player guessed wrong.
     
     Attributes:
-        .    
+        value (int) - card number between 1 and 13
+        points (int) - points given to corresponding guess
+        previous_value (int) - previous card value to compare with
+        guess (int) - player's guess for the card value
     """
 
     def __init__(self):
