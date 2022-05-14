@@ -20,13 +20,13 @@ class Card:
         self.points = 0
         self.previous_value = 0
         self.guess = ''
+        self.is_playing = True
         
 
 
         
     def draw(self):
         """Generates a random value between 1 and 13 and calculates points based on player's guess.txt
-
         Args:
             self (Card): An instance of Card
         
@@ -46,4 +46,3 @@ class Card:
             self.points = -75
         else:
             self.points = 0
-        
