@@ -11,6 +11,9 @@ class Dealer:
     The responsibility of a Dealer is to control the sequence of play and draw cards.
     Attributes:
         is_playing (boolean): Whether or not the game is being played.
+        points (int): The score for one round of play.
+        total_score (int): The score for the entire game.
+        card: An instance of Card
     """
 
     def __init__(self):
