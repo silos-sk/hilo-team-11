@@ -37,7 +37,7 @@ class Dealer:
         """Asks the player if he wants to continue playing.
         """
 
-        while True:
+         while True and self.total_score > 0:
                 looping = input('Play again? [y/n]: ').lower()
                 if looping == 'y':
                     self.card.is_playing = True
@@ -49,6 +49,8 @@ class Dealer:
                     break
                 else:
                     print('Invalid input, try again!')
+        else:
+            print("Game Over! Thanks for playing Hilo.")
         print('')  
         pass
 
